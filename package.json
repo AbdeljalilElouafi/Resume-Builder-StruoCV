@@ -1,0 +1,16 @@
+{
+  "name": "resume-builder-struocv",
+  "version": "1.0.0",
+  "description": "StruoCV Resume Builder est une application en ligne permettant aux utilisateurs de créer, personnaliser et télécharger facilement un CV professionnel en quelques étapes simples. L'outil propose une interface dynamique et fluide, offrant une expérience utilisateur optimale pour la création d'un CV moderne et adapté aux besoins des utilisateurs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\"Error: no test specified\"&& exit 1",
+    "dev": "npx tailwindcss -i ./assets/Css/style.css -o ./assets/Css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de CV - Formulaire</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./output.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Création de CV</h1>
+        <form id="cv-form">
+
+            <div class="step1">
+                <h2 class="bg-red-600">Informations Personnells</h2>
+                <input type="text" id="name" placeholder="Full name" required>
+                <input type="email" id="email" placeholder="email" required>
+                <input type="number" id="phone" placeholder="phone number" required>
+                <input type="text" id="address" placeholder="address" required>
+                <input type="url" id="linkd-in" placeholder="linkdin" required>
+                <input type="url" id="github" placeholder="GitHub" required>
+                <input type="url" id="portfolio" placeholder="portfolio" required>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+            </div>
+
+            <div class="step2" >
+                <h2>Détails Professionnels</h2>
+                <input type="text" id="job-title" placeholder="Titre du poste" required>
+                <input type="text" id="profile-description" placeholder="Résumé du profil" required>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step3" >
+                <h2>Compétences Techniques</h2>
+                <input type="text" id="hard-skills" placeholder="Compétences Techniques" required>
+
+                <button id="add-btn" class="btn-add">Add more</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step4" >
+                <h2>Compétences Transversales</h2>
+                <input type="text" id="job-title" placeholder="Titre du poste" required>
+
+                <button id="add-btn" class="btn-add">Add more</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step5" >
+                <h2>Langues</h2>
+                <input type="text" id="language" placeholder="Langue" required>
+                <input type="text" id="language-level" placeholder="Niveau" required>
+
+                <button id="add-btn" class="btn-add">Add more</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step6" >
+                <h2>Loisirs et Intérêts</h2>
+                <input type="text" id="hobbies" placeholder="Loisir / Intérêt">
+
+                <button type="add-btn" class="btn-add">Ajouter un loisir</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+            <div class="step7" >
+                <h2>Cursus Universitaire</h2>
+                <input type="text" id="degree" placeholder="Diplôme" required>
+                <input type="text" id="university" placeholder="Université" required>
+
+                <button type="add-btn" class="btn-add">Ajouter une formation</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step8" >
+                <h2>Expériences Professionnelles</h2>
+                <input type="text" id="job" placeholder="Poste occupé" required>
+                <input type="text" id="company" placeholder="Entreprise" required>
+
+                <button type="add-btn" class="btn-add">Ajouter une expérience</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step9" >
+                <h2>Certifications</h2>
+                <input type="text" id="certification-name" placeholder="Nom de la certification" required>
+                <input type="url" id="certification-link" placeholder="Lien de la certification" required>
+
+                <button type="add-btn" class="btn-add" >Ajouter une certification</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+            <div class="step10" >
+                <h2>Enregistrement du CV</h2>
+                <h3>Choisir la template de votre CV:</h3>
+                <select name="selection" id="modele-select">
+                    <option value="classic" class="t1">Classic</option>
+                    <option value="Minimaliste" class="t2">Minimaliste</option>
+                </select>
+                <button type="button" class="btn-imp">Imprimer</button>
+                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+
+            </div>
+
+
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
