@@ -23,9 +23,9 @@ body {
     margin-bottom: 20px;
   }
   
-  .step {
+   /* .step {
     display: none;
-  }
+  }  */
   
   .step.active {
     display: block;
@@ -45,7 +45,7 @@ body {
   }
   
   button:disabled {
-    background-color: #cccccc;
+    background-color:#007bff;
   }
   
   input, textarea {

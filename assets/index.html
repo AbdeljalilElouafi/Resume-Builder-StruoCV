@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" >
         <h1>Création de CV</h1>
         <form id="cv-form">
 
-            <div class="step1">
-                <h2 class="bg-red-600">Informations Personnells</h2>
+            <div class="step" id="step1">
+                <h2 class="bg-yellow-500">Informations Personnells</h2>
                 <input type="text" id="name" placeholder="Full name" required>
                 <input type="email" id="email" placeholder="email" required>
                 <input type="number" id="phone" placeholder="phone number" required>
@@ -24,93 +24,93 @@
                 <input type="url" id="linkd-in" placeholder="linkdin" required>
                 <input type="url" id="github" placeholder="GitHub" required>
                 <input type="url" id="portfolio" placeholder="portfolio" required>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="bg-red-500"  >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
             </div>
 
-            <div class="step2" >
+            <div class="step" id="step2" >
                 <h2>Détails Professionnels</h2>
                 <input type="text" id="job-title" placeholder="Titre du poste" required>
                 <input type="text" id="profile-description" placeholder="Résumé du profil" required>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
-            <div class="step3" >
+            <div class="step" id="step3" >
                 <h2>Compétences Techniques</h2>
                 <input type="text" id="hard-skills" placeholder="Compétences Techniques" required>
 
                 <button id="add-btn" class="btn-add">Add more</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
-            <div class="step4" >
+            <div class="step" id="step4" >
                 <h2>Compétences Transversales</h2>
                 <input type="text" id="job-title" placeholder="Titre du poste" required>
 
                 <button id="add-btn" class="btn-add">Add more</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
-            <div class="step5" >
-                <h2>Langues</h2>
-                <input type="text" id="language" placeholder="Langue" required>
+            <div class="step" id="step5" >
+            <h2>Langues</h2>
+                <inpt type="text" id="language" placeholder="Langue" required>
                 <input type="text" id="language-level" placeholder="Niveau" required>
 
                 <button id="add-btn" class="btn-add">Add more</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
-            <div class="step6" >
+            <div class="step" id="step6" >
                 <h2>Loisirs et Intérêts</h2>
                 <input type="text" id="hobbies" placeholder="Loisir / Intérêt">
 
                 <button type="add-btn" class="btn-add">Ajouter un loisir</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
-            <div class="step7" >
+            <div class="step" id="step7" >
                 <h2>Cursus Universitaire</h2>
                 <input type="text" id="degree" placeholder="Diplôme" required>
                 <input type="text" id="university" placeholder="Université" required>
 
                 <button type="add-btn" class="btn-add">Ajouter une formation</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
-            <div class="step8" >
+            <div class="step" id="step8" >
                 <h2>Expériences Professionnelles</h2>
                 <input type="text" id="job" placeholder="Poste occupé" required>
                 <input type="text" id="company" placeholder="Entreprise" required>
 
                 <button type="add-btn" class="btn-add">Ajouter une expérience</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant">Précedant</button>
 
             </div>
 
-            <div class="step9" >
+            <div class="step" id="step9" >
                 <h2>Certifications</h2>
                 <input type="text" id="certification-name" placeholder="Nom de la certification" required>
                 <input type="url" id="certification-link" placeholder="Lien de la certification" required>
 
                 <button type="add-btn" class="btn-add" >Ajouter une certification</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
-            <div class="step10" >
+            <div class="step" id="step10" >
                 <h2>Enregistrement du CV</h2>
                 <h3>Choisir la template de votre CV:</h3>
                 <select name="selection" id="modele-select">
@@ -118,8 +118,8 @@
                     <option value="Minimaliste" class="t2">Minimaliste</option>
                 </select>
                 <button type="button" class="btn-imp">Imprimer</button>
-                <button id="suivant-btn" class="btn-suivant" nextStep(step)>Suivant</button>
-                <button id="precedant-btn" class="btn-precedant" prevStep(step)>Précedant</button>
+                <button id="suivant-btn" class="btn-suivant" >Suivant</button>
+                <button id="precedant-btn" class="btn-precedant" >Précedant</button>
 
             </div>
 
@@ -131,6 +131,15 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+    
+    <script>
+        
+      </script>
+      
+
 </body>
 
 </html>
