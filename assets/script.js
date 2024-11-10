@@ -92,4 +92,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
- 
+function switchSteps(stepNum) {
+  const steps = document.querySelectorAll(".step")
+  steps.forEach(element => {
+      element.classList.add('d-none');
+  });
+  document.getElementById('step' + stepNum).classList.remove('d-none');
+}
