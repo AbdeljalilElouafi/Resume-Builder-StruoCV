@@ -94,10 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function switchSteps(stepNum) {
   const steps = document.querySelectorAll(".step")
+  const totalSteps = steps.length;
+
   steps.forEach(element => {
       element.classList.add('d-none');
   });
   document.getElementById('step' + stepNum).classList.remove('d-none');
+
+  updateProgressBar(stepNum, totalSteps);
 }
 
 function addHardSkills() {
@@ -228,5 +232,14 @@ function addCertificate() {
     newLevel.setAttribute('placeholder', 'Lien de la certification');
     thirdStep.appendChild(newLevel);
   
+
+}
+
+function updateProgressBar(currentStep, totalSteps) {
+
+  const progressBar = document.getElementById('progress-bar');
+  const progress = (currentStep - 1) / (totalSteps - 1) * 100;
+  
+  progressBar.style.width = progress + '%'; 
 
 }
