@@ -36,110 +36,121 @@
                 
             </div>
 
-            <div class="step" id="step2" >
+            <div class="step d-none" id="step2" >
                 <h2>Détails Professionnels</h2>
                 <label for="job-title">Titre du poste:</label>
                 <input type="text" id="job-title" placeholder="Titre du poste" required>
                 <label for="profile-description">Description du votre profile:</label>
                 <input type="text" id="profile-description" placeholder="Résumé du profil" required>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(3)">Suivant</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(1)">Précedant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(3)">Suivant</button>
 
             </div>
 
-            <div class="step" id="step3" >
+            <div class="step d-none" id="step3" >
                 <h2>Compétences Techniques</h2>
-                <label for="hard-skills">Compétences Techniques :</label>
-                <input type="text" id="hard-skills" placeholder="Compétences Techniques" required>
-
-                <button type="button" id="add-btn" class="btn-add">Add more</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(4)">Suivant</button>
+                
+                <div id="input-field">
+                    <label for="hard-skills">Compétences Techniques :</label>
+                    <input type="text" id="hard-skills" placeholder="Compétences Techniques" required>
+                </div>
+                <button type="button" id="add-btn" class="btn-add" onclick="addHardSkills()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(2)">Précedant</button>
-
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(4)">Suivant</button>
+                
             </div>
-
-            <div class="step" id="step4" >
+            
+            <div class="step d-none" id="step4" >
                 <h2>Compétences Transversales</h2>
-                <label for="soft-skills">Full name:</label>
-                <input type="text" id="soft-skills" placeholder="Compétences Transversales" required>
-
-                <button type="button" id="add-btn" class="btn-add">Add more</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(5)">Suivant</button>
+                <div id="input-field4">
+                    <label for="soft-skills">Full name:</label>
+                    <input type="text" id="soft-skills" placeholder="Compétences Transversales" required>
+                </div>
+                <button type="button" id="add-btn" class="btn-add" onclick="addSoftSkills()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(3)">Précedant</button>
-
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(5)">Suivant</button>
+                
             </div>
-
-            <div class="step" id="step5" >
-            <h2>Langues</h2>
-                <label for="language">Langues:</label>
-                <input type="text" id="language" placeholder="Langue" required>
-                <label for="language-level">Niveau:</label>
-                <input type="text" id="language-level" placeholder="Niveau" required>
-
-                <button type="button" id="add-btn" class="btn-add">Add more</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(6)">Suivant</button>
+            
+            <div class="step d-none" id="step5" >
+                <h2>Langues</h2>
+                <div id="input-field5">
+                    <label for="language">Langues:</label>
+                    <input type="text" id="language" placeholder="Langue" required>
+                    <label for="language-level">Niveau:</label>
+                    <input type="text" id="language-level" placeholder="Niveau" required>
+                </div>
+                <button type="button" id="add-btn" class="btn-add" onclick="addLanguages()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(4)">Précedant</button>
-
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(6)">Suivant</button>
+                
             </div>
-
-            <div class="step" id="step6" >
+            
+            <div class="step d-none" id="step6" >
                 <h2>Loisirs et Intérêts</h2>
-                <label for="hobbies">Les loisires:</label>
-                <input type="text" id="hobbies" placeholder="Loisir / Intérêt">
-
-                <button type="button" class="btn-add">Ajouter un loisir</button>
-                <button type="button" id="suivant-btn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="switchSteps(7)">Suivant</button>
+                <div id="input-field6">
+                    <label for="hobbies">Les loisires:</label>
+                    <input type="text" id="hobbies" placeholder="Loisir / Interet">
+                </div>
+                <button type="button" class="btn-add" onclick="addHobbies()">Ajouter un loisir</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(5)">Précedant</button>
-
+                <button type="button" id="suivant-btn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="switchSteps(7)">Suivant</button>
+                
             </div>
-            <div class="step" id="step7" >
+            <div class="step d-none" id="step7" >
                 <h2>Cursus Universitaire</h2>
-                <label for="degree">Diplome:</label>
-                <input type="text" id="degree" placeholder="Diplome" required>
-                <label for="university">Etablissement:</label>
-                <input type="text" id="university" placeholder="Etablissement" required>
-
-                <button type="button" class="btn-add">Ajouter une formation</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(8)">Suivant</button>
+                <div id="input-field7">
+                    <label for="degree">Diplome:</label>
+                    <input type="text" id="degree" placeholder="Diplome" required>
+                    <label for="university">Etablissement:</label>
+                    <input type="text" id="university" placeholder="Etablissement" required>
+                </div>
+                
+                <button type="button" class="btn-add" onclick="addDiplomes()">Ajouter une formation</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(6)">Précedant</button>
-
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(8)">Suivant</button>
+                
             </div>
-
-            <div class="step" id="step8" >
+            
+            <div class="step d-none" id="step8" >
                 <h2>Expériences Professionnelles</h2>
-                <label for="job">Poste occupé:</label>
-                <input type="text" id="job" placeholder="Poste occupé" required>
-                <label for="company">Nom d'entreprise:</label>
-                <input type="text" id="company" placeholder="Entreprise" required>
-
-                <button type="button" class="btn-add">Ajouter une expérience</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(9)">Suivant</button>
+                <div id="input-field8">
+                    <label for="job">Poste occupé:</label>
+                    <input type="text" id="job" placeholder="Poste occupé" required>
+                    <label for="company">Nom d'entreprise:</label>
+                    <input type="text" id="company" placeholder="Entreprise" required>
+                </div>
+                
+                <button type="button" class="btn-add" onclick="addExperiences()">Ajouter une expérience</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(7)">Précedant</button>
-
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(9)">Suivant</button>
+                
             </div>
-
-            <div class="step" id="step9" >
+            
+            <div class="step d-none" id="step9" >
                 <h2>Certifications</h2>
+                <div id="input-field9">
                 <label for="certification-name">Certificat:</label>
                 <input type="text" id="certification-name" placeholder="Nom de la certification" required>
                 <label for="certification-link">Lien:</label>
                 <input type="url" id="certification-link" placeholder="Lien de la certification" required>
+                </div>
 
-                <button type="button" class="btn-add" >Ajouter une certification</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(10)">Suivant</button>
+                <button type="button" class="btn-add" onclick="addCertificate()">Ajouter une certification</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(8)">Précedant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(10)">Suivant</button>
 
             </div>
 
-            <div class="step" id="step10" >
+            <div class="step d-none" id="step10" >
                 <h2>Enregistrement du CV</h2>
                 <h3>Choisir la template de votre CV:</h3>
+                <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(9)">Précedant</button>
                 <select name="selection" id="modele-select">
                     <option value="classic" class="t1">Classic</option>
                     <option value="Minimaliste" class="t2">Minimaliste</option>
                 </select>
                 <button type="button" class="btn-imp">Download PDF</button>
-                <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(9)">Précedant</button>
 
             </div>
 

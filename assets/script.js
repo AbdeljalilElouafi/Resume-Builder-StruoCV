@@ -99,3 +99,134 @@ function switchSteps(stepNum) {
   });
   document.getElementById('step' + stepNum).classList.remove('d-none');
 }
+
+function addHardSkills() {
+  let thirdStep = document.getElementById('input-field');
+  
+
+  
+    let newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('id', 'hard-skills');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Compétences Techniques');
+    thirdStep.appendChild(newField);
+  
+
+}
+function addSoftSkills() {
+  let thirdStep = document.getElementById('input-field4');
+  
+
+  
+    let newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('id', 'soft-skills');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Compétences Transversales');
+    thirdStep.appendChild(newField);
+  
+
+}
+
+function addLanguages() {
+  let thirdStep = document.getElementById('input-field5');
+  
+
+  
+    let newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('id', 'language');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Langue');
+    thirdStep.appendChild(newField);
+
+    let newLevel = document.createElement('input');
+    newLevel.setAttribute('type', 'text');
+    newLevel.setAttribute('id', 'language-level');
+    newLevel.setAttribute('siz', 50);
+    newLevel.setAttribute('placeholder', 'Niveau');
+    thirdStep.appendChild(newLevel);
+  
+
+}
+function addHobbies() {
+  let thirdStep = document.getElementById('input-field6');
+  
+  
+  
+  let newField = document.createElement('input');
+  newField.setAttribute('type', 'text');
+  newField.setAttribute('id', 'hobbies');
+  newField.setAttribute('siz', 50);
+  newField.setAttribute('placeholder', 'Loisir / Interet');
+  thirdStep.appendChild(newField);
+  
+  
+}
+
+function addDiplomes() {
+  let thirdStep = document.getElementById('input-field7');
+  
+
+  
+    let newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('id', 'degree');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Diplome');
+    thirdStep.appendChild(newField);
+
+    let newLevel = document.createElement('input');
+    newLevel.setAttribute('type', 'text');
+    newLevel.setAttribute('id', 'university');
+    newLevel.setAttribute('siz', 50);
+    newLevel.setAttribute('placeholder', 'Etablissement');
+    thirdStep.appendChild(newLevel);
+  
+
+}
+
+function addExperiences() {
+  let thirdStep = document.getElementById('input-field8');
+  
+
+  
+    let newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('id', 'job');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Poste occupé');
+    thirdStep.appendChild(newField);
+
+    let newLevel = document.createElement('input');
+    newLevel.setAttribute('type', 'text');
+    newLevel.setAttribute('id', 'company');
+    newLevel.setAttribute('siz', 50);
+    newLevel.setAttribute('placeholder', 'Entreprise');
+    thirdStep.appendChild(newLevel);
+  
+
+}
+
+function addCertificate() {
+  let thirdStep = document.getElementById('input-field9');
+  
+
+  
+    let newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('id', 'certification-name');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Nom de la certification');
+    thirdStep.appendChild(newField);
+
+    let newLevel = document.createElement('input');
+    newLevel.setAttribute('type', 'url');
+    newLevel.setAttribute('id', 'certification-url');
+    newLevel.setAttribute('siz', 50);
+    newLevel.setAttribute('placeholder', 'Lien de la certification');
+    thirdStep.appendChild(newLevel);
+  
+
+}
