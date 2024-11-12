@@ -15,11 +15,12 @@
 <body>
     <div class="container" >
         <h1>Création de CV</h1>
-        <form id="cv-form">
+        <form id="cv-form" >
             <div class="step" id="step1">
                 <h2 class="bg-yellow-500">Informations Personnells</h2>
                 <label for="name">Full name:</label>
-                <input type="text" id="name" placeholder="Full name" required>
+                <div id="error"></div>
+                <input type="text" id="name" placeholder="Full name" required pattern="^(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%^&*]{8,}$">
                 <label for="email">Enter your email:</label>
                 <input type="email" id="email" placeholder="email" required>
                 <label for="number">Enter your phone number:</label>
@@ -32,7 +33,7 @@
                 <input type="url" id="github" placeholder="GitHub" >
                 <label for="portfolio">Enter your Portfolio url:</label>
                 <input type="url" id="portfolio" placeholder="portfolio" >
-                <button type="button" id="suivant-btn" class="bg-red-500" onclick="switchSteps(2)">Suivant</button>
+                <button type="button" id="suivant-btn" class="bg-red-500" onclick="switchSteps(2)" >Suivant</button>
                 
             </div>
 
@@ -43,7 +44,7 @@
                 <label for="profile-description">Description du votre profile:</label>
                 <input type="text" id="profile-description" placeholder="Résumé du profil" required>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(1)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(3)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(3)" >Suivant</button>
 
             </div>
 
@@ -56,7 +57,7 @@
                 </div>
                 <button type="button" id="add-btn" class="btn-add" onclick="addHardSkills()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(2)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(4)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(4)" >Suivant</button>
                 
             </div>
             
@@ -68,7 +69,7 @@
                 </div>
                 <button type="button" id="add-btn" class="btn-add" onclick="addSoftSkills()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(3)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(5)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(5)" >Suivant</button>
                 
             </div>
             
@@ -82,7 +83,7 @@
                 </div>
                 <button type="button" id="add-btn" class="btn-add" onclick="addLanguages()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(4)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(6)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(6)" >Suivant</button>
                 
             </div>
             
@@ -94,7 +95,7 @@
                 </div>
                 <button type="button" class="btn-add" onclick="addHobbies()">Ajouter un loisir</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(5)">Précedant</button>
-                <button type="button" id="suivant-btn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="switchSteps(7)">Suivant</button>
+                <button type="button" id="suivant-btn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="switchSteps(7)" >Suivant</button>
                 
             </div>
             <div class="step d-none" id="step7" >
@@ -108,7 +109,7 @@
                 
                 <button type="button" class="btn-add" onclick="addDiplomes()">Ajouter une formation</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(6)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(8)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(8)" >Suivant</button>
                 
             </div>
             
@@ -123,7 +124,7 @@
                 
                 <button type="button" class="btn-add" onclick="addExperiences()">Ajouter une expérience</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(7)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(9)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(9)" >Suivant</button>
                 
             </div>
             
@@ -138,7 +139,8 @@
 
                 <button type="button" class="btn-add" onclick="addCertificate()">Ajouter une certification</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(8)">Précedant</button>
-                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(10)">Suivant</button>
+                <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(10)" >Suivant</button>
+                
 
             </div>
 
@@ -150,7 +152,7 @@
                     <option value="classic" class="t1">Classic</option>
                     <option value="Minimaliste" class="t2">Minimaliste</option>
                 </select>
-                <button type="button" class="btn-imp">Download PDF</button>
+                <button type="button" class="btn-imp" id="load-pdf" disabled>Download PDF</button>
 
             </div>
 

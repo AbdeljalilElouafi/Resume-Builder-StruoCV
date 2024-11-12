@@ -102,6 +102,7 @@ function switchSteps(stepNum) {
   document.getElementById('step' + stepNum).classList.remove('d-none');
 
   updateProgressBar(stepNum, totalSteps);
+  
 }
 
 function addHardSkills() {
@@ -243,3 +244,132 @@ function updateProgressBar(currentStep, totalSteps) {
   progressBar.style.width = progress + '%'; 
 
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("cv-form");
+  const downloadBtn = document.getElementById("load-pdf");
+  
+      
+  function validateForm() {
+      let isValid = true;
+      
+      
+      
+      const name = document.getElementById('name');
+      if (!name.value) {
+        isValid = false;
+        
+      }
+      
+      
+      
+      const email = document.getElementById('email');
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!email.value || !emailPattern.test(email.value)) {
+          isValid = false;
+          
+        }
+        
+        
+        
+      const phone = document.getElementById('phone');
+      const phonePattern = /^\d{10}$/; 
+      if (!phone.value || !phonePattern.test(phone.value)) {
+        isValid = false;
+      }
+
+     
+      
+      const address = document.getElementById('address');
+      if (!address.value) {
+        isValid = false;
+        // suivantBtn.disabled = !isValid;
+        
+      }
+      
+      
+      
+      
+      const jobTitle = document.getElementById('job-title');
+      if (!jobTitle.value) {
+        isValid = false;
+      }
+      
+      
+      
+      const profileDescription = document.getElementById('profile-description');
+      if (!profileDescription.value) {
+        isValid = false;
+      }
+      
+      
+      
+      
+      const hardSkills = document.getElementById('hard-skills');
+      if (!hardSkills.value) {
+        isValid = false;
+      }
+      
+      // suivantBtn.disabled = !isValid;
+      
+      
+      
+      const softSkills = document.getElementById('soft-skills');
+      if (!softSkills.value) {
+        isValid = false;
+      }
+      
+      // suivantBtn.disabled = !isValid;
+      
+      
+      
+      const language = document.getElementById('language');
+      const languageLevel = document.getElementById('language-level');
+      if (!language.value || !languageLevel.value) {
+        isValid = false;
+      }
+      
+      // suivantBtn.disabled = !isValid;
+      
+      
+      
+      const degree = document.getElementById('degree');
+      const university = document.getElementById('university');
+      if (!degree.value || !university.value) {
+        isValid = false;
+      }
+      
+      // suivantBtn.disabled = !isValid;
+      
+      
+      
+      const job = document.getElementById('job');
+      const company = document.getElementById('company');
+      if (!job.value || !company.value) {
+        isValid = false;
+      }
+      
+      
+      
+      const certificationName = document.getElementById('certification-name');
+      const certificationLink = document.getElementById('certification-link');
+      if (!certificationName.value || !certificationLink.value) {
+        isValid = false;
+      }
+      
+      downloadBtn.disabled = !isValid;
+      
+    }
+    
+   
+
+    const inputs = form.querySelectorAll('input');
+    inputs.forEach(input => {
+      input.addEventListener('input', validateForm);
+    });
+
+  
+  validateForm();
+});
+
