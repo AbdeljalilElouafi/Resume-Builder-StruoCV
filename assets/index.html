@@ -19,20 +19,32 @@
             <div class="step" id="step1">
                 <h2 class="bg-yellow-500">Informations Personnells</h2>
                 <label for="name">Full name:</label>
-                <div id="error"></div>
                 <input type="text" id="name" placeholder="Full name" required pattern="^(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%^&*]{8,}$">
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
+                
                 <label for="email">Enter your email:</label>
                 <input type="email" id="email" placeholder="email" required>
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
+                
                 <label for="number">Enter your phone number:</label>
                 <input type="number" id="phone" placeholder="phone number" required>
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
+                
                 <label for="address">Enter your address:</label>
                 <input type="text" id="address" placeholder="address" required>
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
+                
                 <label for="linkd-in">Enter your linkdin profile url:</label>
                 <input type="url" id="linkd-in" placeholder="linkdin" >
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
+                
                 <label for="github">Enter your github page url:</label>
                 <input type="url" id="github" placeholder="GitHub" >
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
+                
                 <label for="portfolio">Enter your Portfolio url:</label>
                 <input type="url" id="portfolio" placeholder="portfolio" >
+                <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid name.</p>
                 <button type="button" id="suivant-btn" class="bg-red-500" onclick="switchSteps(2)" >Suivant</button>
                 
             </div>
@@ -53,7 +65,7 @@
                 
                 <div id="input-field">
                     <label for="hard-skills">Compétences Techniques :</label>
-                    <input type="text" id="hard-skills" placeholder="Compétences Techniques" required>
+                    <input type="text" id="hard-skills" class="h-skills" placeholder="Compétences Techniques" required>
                 </div>
                 <button type="button" id="add-btn" class="btn-add" onclick="addHardSkills()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(2)">Précedant</button>
@@ -65,7 +77,7 @@
                 <h2>Compétences Transversales</h2>
                 <div id="input-field4">
                     <label for="soft-skills">Full name:</label>
-                    <input type="text" id="soft-skills" placeholder="Compétences Transversales" required>
+                    <input type="text" id="soft-skills" class="s-skills" placeholder="Compétences Transversales" required>
                 </div>
                 <button type="button" id="add-btn" class="btn-add" onclick="addSoftSkills()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(3)">Précedant</button>
@@ -77,11 +89,13 @@
                 <h2>Langues</h2>
                 <div id="input-field5">
                     <label for="language">Langues:</label>
-                    <input type="text" id="language" placeholder="Langue" required>
+                    <input type="text" id="language" class="lang" placeholder="Langue" required>
+                    
                     <label for="language-level">Niveau:</label>
-                    <input type="text" id="language-level" placeholder="Niveau" required>
+                    <input type="text" id="language-level" class="level" placeholder="Niveau" required>
                 </div>
-                <button type="button" id="add-btn" class="btn-add" onclick="addLanguages()">Add more</button>
+                    
+                    <button type="button" id="add-btn" class="btn-add" onclick="addLanguages()">Add more</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(4)">Précedant</button>
                 <button type="button" id="suivant-btn" class="btn-suivant" onclick="switchSteps(6)" >Suivant</button>
                 
@@ -91,7 +105,7 @@
                 <h2>Loisirs et Intérêts</h2>
                 <div id="input-field6">
                     <label for="hobbies">Les loisires:</label>
-                    <input type="text" id="hobbies" placeholder="Loisir / Interet">
+                    <input type="text" id="hobbies" class="hobbies" placeholder="Loisir / Interet">
                 </div>
                 <button type="button" class="btn-add" onclick="addHobbies()">Ajouter un loisir</button>
                 <button type="button" id="precedant-btn" class="btn-precedant" onclick="switchSteps(5)">Précedant</button>
@@ -102,9 +116,9 @@
                 <h2>Cursus Universitaire</h2>
                 <div id="input-field7">
                     <label for="degree">Diplome:</label>
-                    <input type="text" id="degree" placeholder="Diplome" required>
+                    <input type="text" id="degree" class="degree" placeholder="Diplome" required>
                     <label for="university">Etablissement:</label>
-                    <input type="text" id="university" placeholder="Etablissement" required>
+                    <input type="text" id="university" class="university" placeholder="Etablissement" required>
                 </div>
                 
                 <button type="button" class="btn-add" onclick="addDiplomes()">Ajouter une formation</button>
@@ -117,9 +131,9 @@
                 <h2>Expériences Professionnelles</h2>
                 <div id="input-field8">
                     <label for="job">Poste occupé:</label>
-                    <input type="text" id="job" placeholder="Poste occupé" required>
+                    <input type="text" id="job" class="job" placeholder="Poste occupé" required>
                     <label for="company">Nom d'entreprise:</label>
-                    <input type="text" id="company" placeholder="Entreprise" required>
+                    <input type="text" id="company" class="company" placeholder="Entreprise" required>
                 </div>
                 
                 <button type="button" class="btn-add" onclick="addExperiences()">Ajouter une expérience</button>
@@ -132,9 +146,9 @@
                 <h2>Certifications</h2>
                 <div id="input-field9">
                 <label for="certification-name">Certificat:</label>
-                <input type="text" id="certification-name" placeholder="Nom de la certification" required>
+                <input type="text" id="certification-name" class="certificate" placeholder="Nom de la certification" required>
                 <label for="certification-link">Lien:</label>
-                <input type="url" id="certification-link" placeholder="Lien de la certification" required>
+                <input type="url" id="certification-link" class="certif-link" placeholder="Lien de la certification" required>
                 </div>
 
                 <button type="button" class="btn-add" onclick="addCertificate()">Ajouter une certification</button>
